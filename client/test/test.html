@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body style="margin: 0px;">
+    <canvas id="main" width="640px" height="20px">
+        Canvas not supported.
+    </canvas>
+
+    <script src="../lib/js/util.js"></script>
+        <script>
+        var INCLUDE_URI = '../lib/js/';
+        Util.load_scripts(["webutil.js", "base64.js", "websock.js", "des.js",
+                           "keysymdef.js", "keyboard.js", "input.js", "display.js",
+                           "jsunzip.js", "rfb.js"]);
+        window.onscriptsload = function () {
+            var rfb = new RFB({
+                'target':       $D('main'),
+                'encrypt':      WebUtil.getQueryVar('encrypt',
+                        (window.location.protocol === "https:")),
+                'repeaterID':   WebUtil.getQueryVar('repeaterID', ''),
+                'true_color':   WebUtil.getQueryVar('true_color', true),
+                'local_cursor': WebUtil.getQueryVar('cursor', true),
+                'shared':       WebUtil.getQueryVar('shared', true),
+                'view_only':    WebUtil.getQueryVar('view_only', false),
+                'updateState':  function updateState(rfb, state, oldstate, msg) {
+                    console.log(state);
+                }
+            });
+            rfb.connect('127.0.0.1', '6080', 'demojo', '');
+        };
+        </script>
+
+    </body>
+</html>

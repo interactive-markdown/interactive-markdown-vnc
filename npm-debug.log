@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'https://github.com/InstantWebP2P/node-httpp.git' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.30
+4 warn package.json demojo@0.0.0 No description
+5 warn package.json demojo@0.0.0 No repository field.
+6 warn package.json demojo@0.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'https://github.com/InstantWebP2P/node-httpp.git', null ]
+9 verbose cache add name=undefined spec="https://github.com/InstantWebP2P/node-httpp.git" args=["https://github.com/InstantWebP2P/node-httpp.git",null]
+10 verbose parsed url { protocol: 'https:',
+10 verbose parsed url   slashes: true,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: 'github.com',
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: 'github.com',
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '/InstantWebP2P/node-httpp.git',
+10 verbose parsed url   path: '/InstantWebP2P/node-httpp.git',
+10 verbose parsed url   href: 'https://github.com/InstantWebP2P/node-httpp.git' }
+11 silly lockFile bf0da1b2-com-InstantWebP2P-node-httpp-git https://github.com/InstantWebP2P/node-httpp.git
+12 verbose lock https://github.com/InstantWebP2P/node-httpp.git /Users/kevin/.npm/bf0da1b2-com-InstantWebP2P-node-httpp-git.lock
+13 verbose addRemoteTarball [ 'https://github.com/InstantWebP2P/node-httpp.git', null ]
+14 info retry fetch attempt 1 at 13:38:33
+15 verbose fetch to= /tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+16 http GET https://github.com/InstantWebP2P/node-httpp.git
+17 http 200 https://github.com/InstantWebP2P/node-httpp.git
+18 verbose tar unpack /tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+19 silly lockFile bcfe2d51-tantWebP2P-node-httpp-git-unpack tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack
+20 verbose lock tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack /Users/kevin/.npm/bcfe2d51-tantWebP2P-node-httpp-git-unpack.lock
+21 silly lockFile 7b74b95b-com-InstantWebP2P-node-httpp-git tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+22 verbose lock tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git /Users/kevin/.npm/7b74b95b-com-InstantWebP2P-node-httpp-git.lock
+23 silly gunzTarPerm modes [ '755', '644' ]
+24 error not a package /tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+25 silly lockFile bcfe2d51-tantWebP2P-node-httpp-git-unpack tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack
+26 silly lockFile bcfe2d51-tantWebP2P-node-httpp-git-unpack tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack
+27 silly lockFile 7b74b95b-com-InstantWebP2P-node-httpp-git tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+28 silly lockFile 7b74b95b-com-InstantWebP2P-node-httpp-git tar:///tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git
+29 silly lockFile bf0da1b2-com-InstantWebP2P-node-httpp-git https://github.com/InstantWebP2P/node-httpp.git
+30 silly lockFile bf0da1b2-com-InstantWebP2P-node-httpp-git https://github.com/InstantWebP2P/node-httpp.git
+31 error Error: ENOENT, open '/tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack/package.json'
+32 error If you need help, you may report this *entire* log,
+32 error including the npm and node versions, at:
+32 error     <http://github.com/npm/npm/issues>
+33 error System Darwin 13.2.0
+34 error command "node" "/usr/local/bin/npm" "install" "--save" "https://github.com/InstantWebP2P/node-httpp.git"
+35 error cwd /Users/kevin/Desktop/demojo
+36 error node -v v0.10.30
+37 error npm -v 1.4.21
+38 error path /tmp/npm-87197-u4Wi6IBT/github.com/InstantWebP2P/node-httpp.git-unpack/package.json
+39 error code ENOENT
+40 error errno 34
+41 verbose exit [ 34, true ]
