@@ -13,5 +13,6 @@ ADD . /usr/local/im-vnc
 WORKDIR /usr/local/im-vnc
 
 #5900 - VNC Server, 6080 - Websocket VNC Proxy
+EXPOSE 5900
 
 CMD ["/usr/local/im-vnc/docker/pre_build.sh"]
