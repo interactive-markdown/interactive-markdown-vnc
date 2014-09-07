@@ -1,18 +1,17 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
-# make sure the package repository is up to date
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
+# Install python
+RUN apt-get -y update
+RUN apt-get -y install python python-pip
 
-# Install vnc, xvfb 
-RUN apt-get install -y x11vnc xvfb curl
+# Install stuff for vnc
+RUN apt-get install -y x11vnc xvfb curl net-tools
 RUN mkdir /.vnc
-
-#run xvfb on window handler 0
-RUN Xvfb :0 &
 
 #install the proxy
 ADD . /usr/local/im-vnc
 WORKDIR /usr/local/im-vnc
 
 #5900 - VNC Server, 6080 - Websocket VNC Proxy
+
+CMD ["/usr/local/im-vnc/docker/pre_build.sh"]

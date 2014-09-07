@@ -5,17 +5,16 @@
 	left: 20px;
 	display: table;
 	line-height: 0px;
+	padding: 117px 0px;
 
-	&:before {
-	}
-	&:after { 
+	background: no-repeat bottom center url(../img/android_bot.png),
+							repeat-x bottom center url(../img/android_bot_tile.png);
+
+	&:after
+	{
 		content: '';
-		display: block;
-		width: 100%;
-		height: 353px;
-		position: absolute;
-		top: 100%;
-		background: repeat-x top center url(../img/android_bot_tile.png);
+		background: no-repeat top left url(../img/android_bot_left.png),
+							  no-repeat top right url(../img/android_bot_right.png);
 	}
 
 	canvas { position: relative; background: gray;}

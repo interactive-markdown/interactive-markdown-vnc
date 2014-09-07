@@ -1,7 +1,5 @@
 FROM interactivemarkdown/base
+RUN apt-get install -y speedcrunch
 
-RUN apt-get -y install firefox
-ENV DISPLAY :0
-RUN firefox
-
-RUN /usr/local/im-vnc/docker/post_build.sh
+ADD . /usr/local/im-vnc/test/
+CMD ["/bin/bash", "/usr/local/im-vnc/test/test_proxy.sh"]
