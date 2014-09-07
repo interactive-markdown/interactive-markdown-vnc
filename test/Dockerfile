@@ -1,5 +1,7 @@
 FROM interactivemarkdown/base
 
-# environment code goes here
-ADD ./ruby_build_script.sh
-CMD ["./ruby_build_script.sh", "--url", "https://github.com/rails/rails"]
+RUN apt-get -y install firefox
+ENV DISPLAY :0
+RUN firefox
+
+RUN /usr/local/im-vnc/docker/post_build.sh

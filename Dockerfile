@@ -1,12 +1,15 @@
-FROM ubuntu:14.04
+FROM ubuntu:12.04
 
 # make sure the package repository is up to date
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
 
-# Install vnc, xvfb in order to create a 'fake' display
+# Install vnc, xvfb 
 RUN apt-get install -y x11vnc xvfb curl
 RUN mkdir /.vnc
+
+#run xvfb on window handler 0
+RUN Xvfb :0 &
 
 #install the proxy
 ADD . /usr/local/im-vnc

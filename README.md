@@ -30,6 +30,10 @@ build_script.sh
 ```
 #run all your build logic here
 
+#if you want to stream to VNC, then hook to display :0
+export DISPLAY=:0
+firefox
+
 #then run the post_build default script:
 /usr/local/im-vnc/docker/post_build.sh
 ```
