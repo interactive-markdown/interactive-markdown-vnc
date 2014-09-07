@@ -35,5 +35,5 @@ export DISPLAY=:0
 firefox
 
 #then run the post_build default script:
-/usr/local/im-vnc/docker/post_build.sh
+/app/im-vnc/docker/post_build.sh
 ```
