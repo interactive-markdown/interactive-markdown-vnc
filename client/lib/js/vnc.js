@@ -21,4 +21,7 @@ var VNC = function(options) {
         });
         self._rfb.connect(options.host, options.port, options.password || '', '');
     };
+    window.onbeforeunload = function() {
+        if(self._rfb) self._rfb.disconnect();
+    };
 };
