@@ -1,4 +1,4 @@
-NAME=android-vnc
+NAME=test-vnc
 IMG=interactivemarkdown/$(NAME)
 
 .PHONY: build run push pull destroy
@@ -16,5 +16,5 @@ pull:
 	docker pull $(IMG)
 
 destroy:                                                                            
-	docker kill $(NAME)
-	docker rm $(NAME)
+	  docker kill $(NAME)
+	  docker rm $(NAME)
