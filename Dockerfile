@@ -8,9 +8,10 @@ RUN apt-get -y install python python-pip
 RUN apt-get install -y x11vnc xvfb curl net-tools
 RUN mkdir /.vnc
 
-ADD . /app/im-vnc
+#install the proxy
+ADD . /usr/local/im-vnc
+WORKDIR /usr/local/im-vnc
 
 #5900 - VNC Server, 6080 - Websocket VNC Proxy
-EXPOSE 5900
 
-CMD ["/app/im-vnc/docker/pre_build.sh"]
+CMD ["/usr/local/im-vnc/docker/pre_build.sh"]

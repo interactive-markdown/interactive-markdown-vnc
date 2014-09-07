@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../lib/css/global.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body style="margin: 0px;">
+    <div class="android">
+        <div id="display"></div>
+    </div>
+
+    <script src="../lib/js/all.min.js"></script>
+    <script src="../lib/js/guac.js"></script>
+    <script>
+        new VNC({
+            host: '192.168.59.103:8081',
+            el: 'display'
+        });
+    </script>
+    </body>
+</html>
